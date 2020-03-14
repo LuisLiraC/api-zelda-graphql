@@ -1,17 +1,19 @@
 import express from 'express'
 import compression from 'compression'
 import cors from 'cors'
-import express_graphql from 'express-graphql'
 import schema from './schema'
+import { ApolloServer } from 'apollo-server-express'
 const app = express()
 
 app.use(cors())
 app.use(compression())
 
-app.use('/', express_graphql({
+const server = new ApolloServer({
   schema,
-  graphiql: true
-}))
+  introspection: true
+})
+
+server.applyMiddleware({ app })
 
 app.listen(3000, () => {
   console.log(`Server listen on http://localhost:3000/graphql`)
