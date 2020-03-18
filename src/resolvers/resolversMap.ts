@@ -1,15 +1,11 @@
 import { IResolvers } from "graphql-tools";
-import query from "./query";
-import type from './type'
-import gamesMutations from './gamesMutations'
-import charactersMutations from './charactersMutations'
+import { query } from "./query";
+import { type } from './type'
+import { mutations } from './mutations'
 
 
-const resolvers: IResolvers = {
+export const resolvers: IResolvers = {
   ...query,
-  ...gamesMutations,
-  ...charactersMutations,
+  ...mutations,
   ...type
 }
-
-export default resolvers

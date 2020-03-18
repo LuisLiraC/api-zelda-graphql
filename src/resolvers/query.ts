@@ -1,7 +1,7 @@
 import { IResolvers } from "graphql-tools"
 import { database } from "../data/data.store"
 
-const query: IResolvers = {
+export const query: IResolvers = {
   Query: {
     characters(): any {
       return database.characters
@@ -33,5 +33,3 @@ const query: IResolvers = {
     }
   }
 }
-
-export default query

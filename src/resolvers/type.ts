@@ -1,7 +1,7 @@
 import { IResolvers } from "graphql-tools"
 import { database } from "../data/data.store"
 
-const type: IResolvers = {
+export const type: IResolvers = {
   Character: {
     games: parent => {
       const gamesList: Array<any> = []
@@ -21,5 +21,3 @@ const type: IResolvers = {
     }
   }
 }
-
-export default type
