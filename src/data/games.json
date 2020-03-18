@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "The Legend of Zelda: Ocarina of time",
+        "release": 1998,
+        "characters": [
+            1, 2, 3, 4
+        ]
+    },
+    {
+        "id": 2,
+        "title": "The Legend of Zelda: Majora's Mask",
+        "release": 2000,
+        "characters": [
+            1
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The Legend of Zelda: The Minish Cap",
+        "release": 2004,
+        "characters": [
+            1, 2, 5
+        ]
+    }
+]

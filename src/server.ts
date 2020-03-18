@@ -3,8 +3,8 @@ import compression from 'compression'
 import cors from 'cors'
 import schema from './schema'
 import { ApolloServer } from 'apollo-server-express'
-const app = express()
 
+const app = express()
 app.use(cors())
 app.use(compression())
 

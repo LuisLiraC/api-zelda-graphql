@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Link",
+        "race": "Hylian",
+        "gender": "Male",
+        "games": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Zelda",
+        "race": "Hylian",
+        "gender": "Female",
+        "games": [
+            1,
+            3
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Ganondorf",
+        "race": "Gerudo",
+        "gender": "Male",
+        "games": [
+            1
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Navi",
+        "race": "Fairy",
+        "gender": "Female",
+        "games": [
+            1
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Ezero",
+        "race": "Minish",
+        "gender": "Female",
+        "games": [
+            3
+        ]
+    }
+]
