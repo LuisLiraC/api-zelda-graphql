@@ -1,16 +1,7 @@
 import { IResolvers } from "graphql-tools"
-import { database } from "../data/data.store"
+import { database } from "../../data/data.store"
 
-export const type: IResolvers = {
-  Character: {
-    games: parent => {
-      const gamesList: Array<any> = []
-      parent.games.map((gameId: number) => {
-        gamesList.push(...database.games.filter(game => game.id === gameId))
-      })
-      return gamesList
-    }
-  },
+export const gamesTypes: IResolvers = {
   Game: {
     characters: parent => {
       const charactersList: Array<any> = []

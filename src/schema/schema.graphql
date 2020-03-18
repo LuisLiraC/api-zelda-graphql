@@ -1,70 +1,8 @@
 type Query {
-  "List of characters"
-  characters: [Character!]!
-  "Return one character by id"
-  character(id: ID!): Character!
-  "List of characters"
-  games: [Game!]!
-  "Return one game by id"
-  game(id: ID!): Game!
+  _empty: String
 }
 
 type Mutation {
-  "Add character"
-  addCharacter(character: NewCharacterInput!): Character!
-  "Edit character"
-  editCharacter(character: EditCharacterInput!): Character!
-  "Delete character"
-  deleteCharacter(id: ID!): Character!
-  "Add game"
-  addGame(game: NewGameInput!): Game!
-  "Edit game"
-  editGame(game: EditGameInput!): Game!
-  "Delete game"
-  deleteGame(id: ID!): Game!
+  _empty: String
 }
 
-type Character {
-  id: ID!
-  name: String!
-  race: String
-  gender: String
-  games: [Game!]!
-}
-
-input NewCharacterInput {
-  id: ID
-  name: String!
-  race: String!
-  gender: String!
-  games: [Int!]!
-}
-
-input EditCharacterInput {
-  id: ID!
-  name: String
-  race: String
-  gender: String
-  games: [Int!]
-}
-
-type Game {
-  id: ID!
-  title: String!
-  release: Int
-  characters: [Character!]!
-}
-
-input NewGameInput {
-  id: ID
-  title: String!
-  release: Int!
-  characters: [Int!]!
-}
-
-input EditGameInput {
-  id: ID!
-  title: String,
-  release: Int
-  characters: [Int!]
-}

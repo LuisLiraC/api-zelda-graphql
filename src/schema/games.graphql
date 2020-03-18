@@ -1,0 +1,36 @@
+extend type Query {
+  "List of games"
+  games: [Game!]!
+  "Return one game by id"
+  game(id: ID!): Game!
+}
+
+extend type Mutation {
+  "Add game"
+  addGame(game: NewGameInput!): Game!
+  "Edit game"
+  editGame(game: EditGameInput!): Game!
+  "Delete game"
+  deleteGame(id: ID!): Game!
+}
+
+type Game {
+  id: ID!
+  title: String!
+  release: Int
+  characters: [Character!]!
+}
+
+input NewGameInput {
+  id: ID
+  title: String!
+  release: Int!
+  characters: [Int!]!
+}
+
+input EditGameInput {
+  id: ID!
+  title: String,
+  release: Int
+  characters: [Int!]
+}

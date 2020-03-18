@@ -1,0 +1,39 @@
+extend type Query {
+  "List of characters"
+  characters: [Character!]!
+  "Return one character by id"
+  character(id: ID!): Character!
+}
+
+extend type Mutation {
+  "Add character"
+  addCharacter(character: NewCharacterInput!): Character!
+  "Edit character"
+  editCharacter(character: EditCharacterInput!): Character!
+  "Delete character"
+  deleteCharacter(id: ID!): Character!
+}
+
+type Character {
+  id: ID!
+  name: String!
+  race: String
+  gender: String
+  games: [Game!]!
+}
+
+input NewCharacterInput {
+  id: ID
+  name: String!
+  race: String!
+  gender: String!
+  games: [Int!]!
+}
+
+input EditCharacterInput {
+  id: ID!
+  name: String
+  race: String
+  gender: String
+  games: [Int!]
+}

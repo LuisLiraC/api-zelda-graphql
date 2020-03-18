@@ -1,11 +1,17 @@
 import { GraphQLSchema } from "graphql";
 import { makeExecutableSchema } from "graphql-tools";
 import 'graphql-import-node'
-import typeDefs from './schema.graphql'
+import dummySchema from './schema.graphql'
+import charactersTypes from './characters.graphql'
+import gamesTypes from './games.graphql'
 import { resolvers } from '../resolvers/resolversMap'
 
 const schema: GraphQLSchema = makeExecutableSchema({
-  typeDefs,
+  typeDefs: [
+    dummySchema,
+    charactersTypes,
+    gamesTypes
+  ],
   resolvers
 })
 
